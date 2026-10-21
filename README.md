@@ -117,6 +117,8 @@ ros2 launch fast_lio mapping.launch.py config_file:=avia.yaml
 
 Change `config_file` parameter to other yaml file under config directory as you need.
 
+For simulated LiDAR publishing `sensor_msgs/msg/PointCloud2` with XYZ fields, set `preprocess.lidar_type` to `5` (SIM). SIM assumes every point has the message header timestamp, so it assigns zero per-point time offset.
+
 Launch livox ros driver. Use MID360 as an example.
 
 ```bash
